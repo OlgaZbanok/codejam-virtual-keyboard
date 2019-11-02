@@ -1,0 +1,65 @@
+.inputarea {
+    display: block;
+    align-items: center;
+    width: 770px;
+    height: 150px;
+    margin: 0 auto 10px;
+    padding: 10px;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+.keyboard {
+    padding: 5px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+
+    &__keys {
+        text-align: center;
+    }
+
+    &__key {
+        height: 40px;
+        width: 6%;
+        max-width: 90px;
+        margin: 3px;
+        border-radius: 4px;
+        border: 1px solid $fontColor;
+        background-color: white;
+        font-size: $fontSize;
+        font-family: $fontFuturaBookC;
+        outline: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: top;
+        padding: 0;
+        transition: all 0.6s ease 0s;
+        &:hover{
+            border-radius: 40%;
+            background: #797373;
+            letter-spacing: 1px;
+            box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+            transition: all 0.4s ease 0s;
+        }
+        &:active {
+            background: #797373;
+          
+        }
+
+        &-wide {
+            width: 10%;
+        }
+
+        &-extrawide {
+            width: 40%;
+            max-width: 500px;
+        }
+       &-activatable {
+           background-color: blue;
+        }
+    }
+}
+
