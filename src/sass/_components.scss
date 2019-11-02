@@ -37,29 +37,40 @@
         vertical-align: top;
         padding: 0;
         transition: all 0.6s ease 0s;
-        &:hover{
+
+        &:hover {
             border-radius: 40%;
             background: #797373;
             letter-spacing: 1px;
-            box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+            box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
             transition: all 0.4s ease 0s;
         }
+
         &:active {
             background: #797373;
-          
+
         }
 
         &-wide {
-            width: 10%;
+            width: 12%;
         }
 
         &-extrawide {
             width: 40%;
             max-width: 500px;
         }
-       &-activatable {
-           background-color: blue;
+
+        &-activatable {
+            background-color: blue;
         }
+
+        .off {
+            display: none;
+        }
+
+        .on {
+            display: block;
+        }
+
     }
 }
-
