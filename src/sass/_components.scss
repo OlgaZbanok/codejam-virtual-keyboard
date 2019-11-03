@@ -20,6 +20,7 @@
     }
 
     &__key {
+        
         height: 40px;
         width: 6%;
         max-width: 90px;
@@ -38,17 +39,21 @@
         padding: 0;
         transition: all 0.6s ease 0s;
 
+     
+&>*{
+    display: none;
+}
         &:hover {
-            border-radius: 40%;
             background: #797373;
-            letter-spacing: 1px;
-            box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-            transition: all 0.4s ease 0s;
         }
 
         &:active {
-            background: #797373;
 
+            border-radius: 40%;
+            background: blue;
+            letter-spacing: 1px;
+            box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+            transition: all 0.4s ease 0s;
         }
 
         &-wide {
@@ -61,16 +66,30 @@
         }
 
         &-activatable {
-            background-color: blue;
+            border-radius: 40%;
+            background: blue;
+            letter-spacing: 1px;
+            box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+            transition: all 5s ease 0s;
         }
 
-        .off {
+        
+        .current{
+            display: block;
+        }
+        & .small{
+            display: none;
+        }
+        & .big{
             display: none;
         }
 
         .on {
             display: block;
         }
+
+       
+      
 
     }
 }

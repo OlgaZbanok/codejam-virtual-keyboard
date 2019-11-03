@@ -1,7 +1,7 @@
 import {
   type,
 } from 'os';
-import keyclickListener from './keyclick';
+import keymousedownListener from './keymousedown';
 import keydownListener from './keydown';
 import keysLayout from './keyslayout';
 
@@ -16,7 +16,7 @@ function createKeyboard() {
   const keyboard = document.createElement('div');
   keyboard.classList.add('keyboard');
 
-  keyboard.addEventListener('click', keyclickListener);
+  keyboard.addEventListener('mousedown', keymousedownListener);
   keysLayout.forEach((row) => {
     row.forEach((key) => {
       const keyElement = document.createElement('button');
@@ -78,32 +78,30 @@ function createKeyboard() {
           break;
         }
       }
+
       keyboard.append(keyElement);
 
       const rus = document.createElement('span');
-      rus.classList.add('rus', 'off');
-
+      rus.classList.add('rus');
       const eng = document.createElement('span');
-      eng.classList.add('eng', 'on');
-
+      eng.classList.add('eng', 'current');
       keyElement.append(rus, eng);
 
       const russmall = document.createElement('span');
-      russmall.classList.add('russmall', 'off');
+      russmall.classList.add('small', 'on');
       russmall.textContent = rusS;
 
       const rusbig = document.createElement('span');
-      rusbig.classList.add('rusbig', 'off');
+      rusbig.classList.add('big');
       rusbig.textContent = rusB;
       rus.append(russmall, rusbig);
 
-
       const engsmall = document.createElement('span');
-      engsmall.classList.add('engsmall', 'on');
+      engsmall.classList.add('small', 'on');
       engsmall.textContent = engS;
 
       const engbig = document.createElement('span');
-      engbig.classList.add('engbig', 'off');
+      engbig.classList.add('big');
       engbig.textContent = engB;
       eng.append(engsmall, engbig);
     });
