@@ -10,6 +10,7 @@ import changeLanguage from './changelanguage';
 createKeyboard();
 const keyboard = document.querySelector('.keyboard');
 const area = document.querySelector('.inputarea');
+area.addEventListener('blur', () => area.focus());
 area.addEventListener('keydown', keydownListener.bind(keyboard));
 area.addEventListener('keyup', keyupListener.bind(keyboard));
 keyboard.addEventListener('mousedown', mousedownListener.bind(keyboard));
