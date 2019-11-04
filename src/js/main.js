@@ -28,11 +28,11 @@ keyboard.doShiftDown = function doShiftDown(key) {
   highlightButton(key);
   return true;
 };
-keyboard.doShiftUp = function doShiftUp(key) {
+keyboard.doShiftUp = function doShiftUp(key, forceShiftToggle = false) {
   if (!this.shiftDown) return false;
   this.shiftDown = false;
   changeRegister();
-  highlightButton(key);
+  highlightButton(key, forceShiftToggle);
   return true;
 };
 keyboard.doCapsLock = function doCapsLock(key) {
@@ -43,6 +43,8 @@ keyboard.doCapsLock = function doCapsLock(key) {
 };
 keyboard.doWriteSymbol = function doWriteSymbol(key) {
   writeKey(key, area);
-  highlightButton(key);
-  return true;
+  if (this.shiftDown) {
+    keyboard.doShiftUp(key, true);
+  }
+  highlightButton(key); return true;
 };
