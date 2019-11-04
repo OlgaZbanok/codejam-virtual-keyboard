@@ -1,9 +1,11 @@
 import {
   type,
 } from 'os';
-import keymousedownListener from './keymousedown';
+import mousedownListener from './mousedown';
 import keydownListener from './keydown';
 import keysLayout from './keyslayout';
+import changeRegister from './changeregister';
+import keyupListener from './keyup';
 
 function createKeyboard() {
   const wrap = document.createElement('div');
@@ -12,16 +14,15 @@ function createKeyboard() {
   const area = document.createElement('textarea');
   area.classList.add('inputarea');
   area.setAttribute('autofocus', 'autofocus');
-  area.addEventListener('keydown', keydownListener);
+
   const keyboard = document.createElement('div');
   keyboard.classList.add('keyboard');
 
-  keyboard.addEventListener('mousedown', keymousedownListener);
   keysLayout.forEach((row) => {
     row.forEach((key) => {
       const keyElement = document.createElement('button');
-
       const [code, rusS, rusB, engS, engB] = key;
+
       keyElement.classList.add('keyboard__key', code);
       switch (key[0]) {
         case 'Backspace':

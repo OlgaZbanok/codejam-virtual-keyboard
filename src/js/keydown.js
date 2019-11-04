@@ -1,11 +1,26 @@
 import keysLayout from './keyslayout';
 import removeActiveKey from './removeactivekey';
+import changeRegister from './changeregister';
+import writeKey from './writekey';
+import highlightButton from './highlightbutton';
 
 function keydownListener(e) {
-  removeActiveKey();
   const ecode = `.${e.code}`;
   const key = document.querySelector(ecode);
+  const area = document.querySelector('.inputarea');
 
-  if (key) key.classList.add('keyboard__key-activatable');
+  switch (e.code) {
+    case 'ShiftRight':
+    case 'ShiftLeft':
+      this.doShiftDown(key);
+      break;
+    case 'CapsLock':
+      this.doCapsLock(key);
+      break;
+    default:
+      this.doWriteSymbol(key);
+  }
+
+  e.preventDefault();
 }
 export default keydownListener;

@@ -1,7 +1,9 @@
 function removeActiveKey() {
-  const activekey = document.querySelector('.keyboard__key-activatable');
+  const activekey = document.querySelectorAll('.keyboard__key-activatable');
+
+
   if (activekey) {
-    activekey.classList.remove('keyboard__key-activatable');
+    activekey.forEach((k) => k.classList.remove('keyboard__key-activatable'));
   }
 }
 export default removeActiveKey;
