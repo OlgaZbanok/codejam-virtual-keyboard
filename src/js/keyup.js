@@ -4,10 +4,10 @@ function keyupListener(e) {
   switch (e.code) {
     case 'ShiftRight':
     case 'ShiftLeft':
-      console.log(this);
       this.doShiftUp(key);
       break;
     default:
   }
+  this.pressedKey.delete(e.code);
 }
 export default keyupListener;

@@ -45,7 +45,7 @@ function createKeyboard() {
         case 'ShiftRight':
           keyElement.classList.add('keyboard__key-wide');
           break;
-      
+
         default: {
           break;
         }

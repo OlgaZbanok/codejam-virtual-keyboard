@@ -25,9 +25,9 @@ function mousedownListener(e) {
       break;
     default:
       this.doWriteSymbol(key);
+      if (this.shiftDown) this.doShiftUp(key);
   }
 
-  area.focus();
   return true;
 }
 export default mousedownListener;

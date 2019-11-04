@@ -16,6 +16,8 @@ function keydownListener(e) {
       this.doWriteSymbol(key);
   }
 
+  this.pressedKey.add(e.code);
+  if (this.pressedKey.has('ControlLeft') && this.pressedKey.has('AltLeft')) this.doChangeLanguage();
   e.preventDefault();
 }
 export default keydownListener;
