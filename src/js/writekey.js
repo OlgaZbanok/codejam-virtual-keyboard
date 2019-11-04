@@ -39,14 +39,6 @@ function writeKey(key, area) {
     case 'OSRight':
       a.value += '';
       break;
-    case 'ShiftRight':
-      a.value += '';
-
-      break;
-    case 'ShiftLeft':
-      a.value += '';
-
-      break;
     case 'ArrowLeft':
       a.value += '';
       break;
@@ -58,10 +50,6 @@ function writeKey(key, area) {
       break;
     case 'ArrowDown':
       a.value += '';
-      break;
-    case 'CapsLock':
-      a.value += '';
-
       break;
     default:
       a.value += val;
