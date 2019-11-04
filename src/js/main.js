@@ -1,7 +1,6 @@
 import createKeyboard from './keyboard';
 import mousedownListener from './mousedown';
 import keydownListener from './keydown';
-import keysLayout from './keyslayout';
 import changeRegister from './changeregister';
 import keyupListener from './keyup';
 import writeKey from './writekey';

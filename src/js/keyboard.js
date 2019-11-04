@@ -1,11 +1,8 @@
 import {
   type,
 } from 'os';
-import mousedownListener from './mousedown';
-import keydownListener from './keydown';
+
 import keysLayout from './keyslayout';
-import changeRegister from './changeregister';
-import keyupListener from './keyup';
 
 function createKeyboard() {
   const wrap = document.createElement('div');
@@ -48,33 +45,7 @@ function createKeyboard() {
         case 'ShiftRight':
           keyElement.classList.add('keyboard__key-wide');
           break;
-        // case 'ArrowUp':
-        //   keyElement.textContent = 'Up';
-        //   break;
-        // case 'ArrowDown':
-        //   keyElement.textContent = 'Down';
-        //   break;
-        // case 'ArrowLeft':
-        //   keyElement.textContent = 'Left';
-        //   break;
-        // case 'ArrowRight':
-        //   keyElement.textContent = 'Right';
-        //   break;
-        // case 'OSLeft':
-        //   keyElement.textContent = 'Win';
-        //   break;
-        // case 'ControlLeft':
-        //   keyElement.textContent = 'Ctrl';
-        //   break;
-        // case 'ControlRight':
-        //   keyElement.textContent = 'Ctrl';
-        //   break;
-        // case 'AltLeft':
-        //   keyElement.textContent = 'Alt';
-        //   break;
-        // case 'AltRight':
-        //   keyElement.textContent = 'Alt';
-        //   break;
+      
         default: {
           break;
         }

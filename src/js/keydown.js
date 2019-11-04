@@ -1,8 +1,3 @@
-import keysLayout from './keyslayout';
-import removeActiveKey from './removeactivekey';
-import changeRegister from './changeregister';
-import writeKey from './writekey';
-import highlightButton from './highlightbutton';
 
 function keydownListener(e) {
   const ecode = `.${e.code}`;

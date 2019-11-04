@@ -2,9 +2,6 @@ import {
   kMaxLength,
 } from 'buffer';
 
-import writeKey from './writekey';
-import highlightButton from './highlightbutton';
-
 function mousedownListener(e) {
   let key = e.target;
   let code = '';
