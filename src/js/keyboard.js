@@ -4,6 +4,8 @@ import {
 
 import keysLayout from './keyslayout';
 
+import getLocalLanguage from './getlanguage';
+
 function createKeyboard() {
   const wrap = document.createElement('div');
   wrap.classList.add('wrapper');
@@ -54,9 +56,13 @@ function createKeyboard() {
       keyboard.append(keyElement);
 
       const rus = document.createElement('span');
-      rus.classList.add('rus');
       const eng = document.createElement('span');
-      eng.classList.add('eng', 'current');
+      rus.classList.add('rus');
+      eng.classList.add('eng');
+      const lang = getLocalLanguage();
+      if (lang === 'eng') eng.classList.add('current');
+      else rus.classList.add('current');
+
       keyElement.append(rus, eng);
 
       const russmall = document.createElement('span');
