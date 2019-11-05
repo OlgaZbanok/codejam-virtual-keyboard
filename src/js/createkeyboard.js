@@ -25,25 +25,16 @@ function createKeyboard() {
       keyElement.classList.add('keyboard__key', code);
       switch (key[0]) {
         case 'Backspace':
-          keyElement.classList.add('keyboard__key-wide');
-          break;
-
-        case 'CapsLock':
-          keyElement.classList.add('keyboard__key-wide');
-          break;
-
-        case 'Enter':
-          keyElement.classList.add('keyboard__key-wide');
+          keyElement.classList.add('keyboard__key-backspacewide');
           break;
 
         case 'Space':
           keyElement.classList.add('keyboard__key-extrawide');
           break;
 
+        case 'CapsLock':
+        case 'Enter':
         case 'ShiftLeft':
-          keyElement.classList.add('keyboard__key-wide');
-          break;
-
         case 'ShiftRight':
           keyElement.classList.add('keyboard__key-wide');
           break;
