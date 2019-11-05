@@ -66,7 +66,7 @@ module.exports = {
                         options: {
                             sourceMap: true,
                             config: {
-                                path: `${PATHS.src}/js/postcss.config.js`
+                                path: `./postcss.config.js`
                             }
                         }
                     },
@@ -94,7 +94,7 @@ module.exports = {
                         options: {
                             sourceMap: true,
                             config: {
-                                path: `${PATHS.src}/js/postcss.config.js`
+                                path: `./postcss.config.js`
                             }
                         }
                     }
@@ -115,7 +115,7 @@ module.exports = {
           new CopyWebpackPlugin([
              
               {
-                from: `${PATHS.src}/fonts`, to: `${PATHS.assets}/fonts`
+                from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}/fonts`
             }
             
           ])
