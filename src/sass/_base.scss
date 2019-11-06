@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('/assets/fonts/FuturaBookC.ttf') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+$fontFuturaBookC: 'FuturaBookC', sans-serif;
+$fontSizeKey: 16px;
+$fontSize: 14px;
+$fontColor: #444;

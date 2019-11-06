@@ -1,0 +1,96 @@
+.inputarea {
+    display: block;
+    align-items: center;
+    height: 150px;
+    margin: 0 auto 10px;
+    padding: 10px;
+    font-size: $fontSize;
+    font-family: monospace;
+    color: $fontColor;
+}
+
+.keyboard {
+    padding: 5px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+
+    &__keys {
+        text-align: center;
+    }
+
+    &__key {
+        height: 40px;
+        width: 6%;
+        max-width: 95px;
+        margin: 3px;
+        border-radius: 4px;
+        border: 1px solid $fontColor;
+        background-color: white;
+        color: #797373;
+        font-size: $fontSizeKey;
+        font-family: $fontFuturaBookC;
+        outline: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: top;
+        padding: 0;
+        transition: all 0.3s ease 0s;
+
+
+        &>* {
+            display: none;
+        }
+
+        &:hover {
+            background: #797373;
+            color: #ffffff;
+        }
+
+        &-wide {
+            width: 14%;
+        }
+        &-backspacewide{
+            width:11%;
+        }
+
+        &-extrawide {
+            width: 39%;
+            max-width: 450px;
+        }
+
+        &-activatable {
+            background: #797373;
+            color: #ffffff;
+            transform: scale(.95);
+        }
+
+        &.active {
+            background: #797373;;
+            color: #ffffff;
+            transform: scale(.90);
+        }
+
+        .current {
+            display: block;
+        }
+
+        & .small {
+            display: none;
+        }
+
+        & .big {
+            display: none;
+        }
+
+        .on {
+            display: block;
+        }
+
+
+
+
+    }
+}
