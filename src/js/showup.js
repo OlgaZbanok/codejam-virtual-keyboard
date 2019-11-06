@@ -1,4 +1,4 @@
-function highlightButton(key, forceShiftToggle = false) {
+function showUp(key, forceShiftToggle = false) {
   const keyboard = document.querySelector('.keyboard');
   if (key.classList.contains('ShiftLeft') || key.classList.contains('ShiftRight') || forceShiftToggle) {
     document.querySelector('.ShiftLeft').classList.toggle('keyboard__key-activatable');
@@ -6,12 +6,11 @@ function highlightButton(key, forceShiftToggle = false) {
   } else if (key.classList.contains('CapsLock')) {
     key.classList.toggle('keyboard__key-activatable');
   } else {
-    key.classList.add('active');
     setTimeout(() => {
       key.classList.remove('active');
-    }, 300);
+    }, 250);
   }
   return false;
 }
 
-export default highlightButton;
+export default showUp;

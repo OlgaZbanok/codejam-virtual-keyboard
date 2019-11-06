@@ -34,7 +34,6 @@ keyboard.doShiftDown = function doShiftDown(key) {
 keyboard.doShiftUp = function doShiftUp(key, forceShiftToggle = false) {
   if (!this.shiftDown) return false;
   this.shiftDown = false;
-
   this.mouseShift = false;
   changeRegister();
   showDown(key, forceShiftToggle);
@@ -43,7 +42,6 @@ keyboard.doShiftUp = function doShiftUp(key, forceShiftToggle = false) {
 keyboard.doCapsLock = function doCapsLock(key) {
   this.capsDown = !this.capsDown;
   changeRegister();
-
   return true;
 };
 keyboard.doWriteSymbol = function doWriteSymbol(key) {

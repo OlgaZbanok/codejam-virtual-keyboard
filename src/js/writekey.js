@@ -10,49 +10,33 @@ function writeKey(key, area) {
   val = cur.innerText;
   switch (code) {
     case 'Tab':
-      a.value += '\t';
+      a.setRangeText('\t', a.selectionStart, a.selectionEnd, 'end');
       break;
     case 'Space':
-      a.value += ' ';
+      a.setRangeText(' ', a.selectionStart, a.selectionEnd, 'end');
       break;
     case 'Enter':
-      a.value += '\n';
+      a.setRangeText('\n', a.selectionStart, a.selectionEnd, 'end');
       break;
     case 'Backspace':
-      a.value = (a.value).slice(0, -1);
+      if (a.selectionStart > 0) a.setRangeText('', a.selectionStart - 1, a.selectionEnd, 'end');
+      if (a.selectionStart === 0) a.setRangeText('', a.selectionStart, a.selectionEnd, 'end');
       break;
     case 'AltLeft':
-      a.value += '';
-      break;
     case 'AltRight':
-      a.value += '';
-      break;
     case 'ControlLeft':
-      a.value += '';
-      break;
     case 'ControlRight':
-      a.value += '';
-      break;
     case 'OSLeft':
-      a.value += '';
-      break;
     case 'OSRight':
-      a.value += '';
-      break;
     case 'ArrowLeft':
-      a.value += '';
-      break;
     case 'ArrowRight':
-      a.value += '';
-      break;
     case 'ArrowUp':
-      a.value += '';
-      break;
     case 'ArrowDown':
       a.value += '';
       break;
+
     default:
-      a.value += val;
+      a.setRangeText(val, a.selectionStart, a.selectionEnd, 'end');
   }
 }
 export default writeKey;

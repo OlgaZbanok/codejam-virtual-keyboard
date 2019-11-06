@@ -3,7 +3,6 @@ import showDown from './showdown';
 function keydownListener(e) {
   const ecode = `.${e.code}`;
   const key = document.querySelector(ecode);
-  const area = document.querySelector('.inputarea');
 
   switch (e.code) {
     case 'ShiftRight':

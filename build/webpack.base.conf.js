@@ -18,24 +18,23 @@ module.exports = {
     output: {
         filename: `${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
-        publicPath: ''
+        publicPath: '/'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader',
                 options: {
                     fix: true,
-                  }
-              },
-              {
+                }
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-              },
+            },
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
@@ -48,7 +47,7 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
-                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -106,19 +105,18 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].css`,
-          }),
-          new HtmlWebpackPlugin({
-              hash: false,
-              template: `${PATHS.src}/index.html`,
-              filename: './index.html'
-          }),
-          new CopyWebpackPlugin([
-             
-              {
-                from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}/fonts`
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            template: `${PATHS.src}/index.html`,
+            filename: './index.html'
+        }),
+        new CopyWebpackPlugin([{
+                from: `${PATHS.src}/assets/fonts`,
+                to: `${PATHS.assets}/fonts`
             }
-            
-          ])
+
+        ])
     ],
 
 }

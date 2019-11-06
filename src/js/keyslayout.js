@@ -1,3 +1,4 @@
+
 const keysLayout = [
   [
     ['Backquote', 'ё', 'Ё', '`', '~'],
@@ -59,7 +60,7 @@ const keysLayout = [
     ['Comma', 'б', 'Б', ',', '<'],
     ['Period', 'ю', 'Ю', '.', '>'],
     ['Slash', '.', ',', '/', '?'],
-    ['ArrowUp', 'Up', 'Up', 'Up', 'Up'],
+    ['ArrowUp', String.fromCharCode(8593), String.fromCharCode(8593), String.fromCharCode(8593), String.fromCharCode(8593)],
     ['ShiftRight', 'Shift', 'Shift', 'Shift', 'Shift'],
   ],
   [
@@ -69,9 +70,9 @@ const keysLayout = [
     ['Space', 'Space', 'Space', 'Space', 'Space'],
     ['AltRight', 'Alt', 'Alt', 'Alt', 'Alt'],
     ['ControlRight', 'Ctrl', 'Ctrl', 'Ctrl', 'Ctrl'],
-    ['ArrowLeft', 'Left', 'Left', 'Left', 'Left'],
-    ['ArrowDown', 'Down', 'Down', 'Down', 'Down'],
-    ['ArrowRight', 'Right', 'Right', 'Right', 'Right'],
+    ['ArrowLeft', String.fromCharCode(8592), String.fromCharCode(8592), String.fromCharCode(8592), String.fromCharCode(8592)],
+    ['ArrowDown', String.fromCharCode(8595), String.fromCharCode(8595), String.fromCharCode(8595), String.fromCharCode(8595)],
+    ['ArrowRight', String.fromCharCode(8594), String.fromCharCode(8594), String.fromCharCode(8594), String.fromCharCode(8594)],
   ],
 ];
 export default keysLayout;

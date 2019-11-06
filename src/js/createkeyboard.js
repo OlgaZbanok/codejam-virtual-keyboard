@@ -3,7 +3,6 @@ import {
 } from 'os';
 
 import keysLayout from './keyslayout';
-
 import getLocalLanguage from './getlanguage';
 
 function createKeyboard() {
@@ -14,6 +13,7 @@ function createKeyboard() {
   area.classList.add('inputarea');
   area.setAttribute('autofocus', 'autofocus');
 
+  area.setAttribute('cols', '95');
   const keyboard = document.createElement('div');
   keyboard.classList.add('keyboard');
 
