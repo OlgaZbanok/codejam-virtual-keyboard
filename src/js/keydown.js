@@ -1,3 +1,4 @@
+import showDown from './showdown';
 
 function keydownListener(e) {
   const ecode = `.${e.code}`;
@@ -10,9 +11,18 @@ function keydownListener(e) {
       this.doShiftDown(key);
       break;
     case 'CapsLock':
+      showDown(key);
       this.doCapsLock(key);
       break;
+
+    case 'ArrowLeft':
+    case 'ArrowRight':
+    case 'ArrowUp':
+    case 'ArrowDown':
+      this.doMoveCursor(key);
+      break;
     default:
+      showDown(key);
       this.doWriteSymbol(key);
   }
 
